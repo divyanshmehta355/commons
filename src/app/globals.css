@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9; /* stone-50 */
+  --foreground: #1c1917; /* stone-900 */
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html, body {
+  background-color: #fafaf9;
+  color: #1c1917;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure form controls always have crisp dark text and white background */
+input, select, textarea {
+  color: #1c1917 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #78716c !important; /* stone-500 for clear legibility */
+  opacity: 1;
+}
+
+/* High contrast default styling */
+p, span, label, td, th {
+  color: inherit;
+}
